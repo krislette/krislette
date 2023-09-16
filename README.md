@@ -1,5 +1,5 @@
 ### Hi there 👋
-https://github.com/krislette/krislette/assets/143507354/3260924c-50c3-4159-84a3-024ce013a686
+![bongo-cat](https://github.com/krislette/krislette/assets/143507354/71dfe3ad-f3d0-4c92-b448-014b6b06f6c1)
 <!--
 **krislette/krislette** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
