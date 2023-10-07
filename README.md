@@ -4,4 +4,4 @@
 </div>
 -->
 
-<img alt="snake eating my contributions" src="https://raw.githubusercontent.com/salesp07/salesp07/output/github-contribution-grid-snake.svg" />
+![snake gif](https://github.com/krislette/krislette/blob/output/github-contribution-grid-snake.svg)
