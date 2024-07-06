@@ -6,7 +6,7 @@
 .addColor {fill: #1a7f37;}
 .delColor {fill: #cf222e;}
 .commentColor {fill: #8b949e;}
-.ascii {fill: #24292f;}
+.ascii {fill: #000000;}
 text, tspan {white-space: pre;}
 </style>
 
@@ -14,6 +14,8 @@ text, tspan {white-space: pre;}
 
 <!-- ASCII Art with darker fill color -->
 <text x="15" y="30" fill="#24292f" class="ascii">
+<tspan x="15" y="30">                .                 </tspan>
+<tspan x="15" y="30">                :++=:       .        </tspan>
 <tspan x="15" y="30">                :++++=:     :%=          </tspan>
 <tspan x="15" y="45">              :-=+**#**=:..  +*:         </tspan>
 <tspan x="15" y="60">           :=+++***+**#****+-:%#=.       </tspan>
@@ -41,6 +43,10 @@ text, tspan {white-space: pre;}
 <tspan x="15" y="390">*##*#+#%#*+*%%%%%      +%%%*+++++##*%%++#</tspan>
 <tspan x="15" y="405">%-#%**#**++++%%%*::..::-%*++++++++#%%+++#</tspan>
 <tspan x="15" y="420">=#%#**+#+#%#*#%%#-....:++++++=++++##++#%%</tspan>
+<tspan x="15" y="435">+%%%**%+*%%##**%%%-.-+=++++++#***###%*#%%</tspan>
+<tspan x="15" y="450">***#*%%#%%%%%%#*#%*++++#***++*+=%%%%%*#%%</tspan>
+<tspan x="15" y="465">@%#+*#%%%%%%%%%#+++++++*=#++++%%%%%#**%%%</tspan>
+<tspan x="15" y="465">@%#+*#%%%%%%%%%#+++++++*=#+++%%%%%%#**%%%</tspan>
 </text>
 
 <!-- Information Text with larger font size -->
