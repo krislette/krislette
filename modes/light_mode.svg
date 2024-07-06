@@ -10,7 +10,7 @@
 text, tspan {white-space: pre;}
 </style>
 
-<rect width="1495px" height="880px" fill="#f6f8fa" rx="15"/>
+<rect width="970px" height="530px" fill="#f6f8fa" rx="15"/>
 
 <!-- ASCII Art with darker fill color -->
 <text x="15" y="30" class="ascii" font-size="12px">
@@ -59,17 +59,6 @@ text, tspan {white-space: pre;}
 <tspan x="15" y="660">:.--==#+++=+=%%*=*#%%+*@%@#%%%%###%%#*+#%%%++++++##**+*++*+*+-*%%%%%%%%**%%%%@%%@#*==#*%% </tspan>
 <tspan x="15" y="675">:--==-=*++**++%%%#*++*@%@%%%%%%%%%%%%%%#*++++++*-%+*##*+++++**+%%%%%%%*+*%%%%%%%%%#*=%#%%%@ </tspan>
 <tspan x="15" y="690">===---==++%##%%@@%#**#+*%%%%%%%%%%%%%*++++++++++**+-+#+++++++#*%%%%%%%%%%%#%%%%%%#%+=*#%%@@ </tspan>
-<tspan x="15" y="705">+=++++=++*+#%#%@%%#*#==%%#%%%%%%%%%% </tspan>
-<tspan x="15" y="720">*+*+**%%%%%%%++#%%%%%%%%#=%#*#%####% </tspan>
-<tspan x="15" y="735">#*#%%%%%%%%# </tspan>
-<tspan x="15" y="750">**###%#%%%%%%%%%% </tspan>
-<tspan x="15" y="765">==#%%%%%##%%%%% </tspan>
-<tspan x="15" y="780">%%%%%%%%%%%%% </tspan>
-<tspan x="15" y="795">%%%%@%%%%%%% </tspan>
-<tspan x="15" y="810">%%%%%%%%%%% </tspan>
-<tspan x="15" y="825">%%%%%%%%%%% </tspan>
-<tspan x="15" y="840">%%%%%%%%%%% </tspan>
-<tspan x="15" y="855">%%%%%%%%%%%% </tspan>
 </text>
 
 <!-- Information Text with larger font size -->
