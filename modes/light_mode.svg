@@ -6,7 +6,7 @@
 .addColor {fill: #1a7f37;}
 .delColor {fill: #cf222e;}
 .commentColor {fill: #8b949e;}
-text, tspan {white-space: pre;}
+.ascii {fill: #24292f;}
 </style>
 
 <rect width="1495px" height="880px" fill="#f6f8fa" rx="15"/>
