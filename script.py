@@ -57,15 +57,19 @@ def update_svg_file(stats, input_file, output_file):
     tree = ET.parse(input_file)
     root = tree.getroot()
 
-    # Find all text elements
+    # Find and update the GitHub stats text elements
     for text in root.findall(".//{http://www.w3.org/2000/svg}text"):
         for tspan in text.findall(".//{http://www.w3.org/2000/svg}tspan"):
-            if "Repos: " in tspan.text and "{" in tspan.text:
-                # Update only the numbers in the existing text
-                tspan.text = f"Repos: {stats['repos']} {{Contributed: {stats['contributed']}}}  | Commits: {stats['commits']}  | Stars: {stats['stars']}"
-            elif "Followers: " in tspan.text and "Lines of Code" in tspan.text:
-                total_lines = stats['additions'] + stats['deletions']
-                tspan.text = f"Followers: {stats['followers']}  | Lines of Code: {total_lines} ({stats['additions']}++, {stats['deletions']}--)"
+            if tspan.text and 'Repos' in tspan.text:
+                tspan.text = f'Repos: {stats["repos"]} | Contributed: {stats["contributed"]}'
+            if tspan.text and 'Commits' in tspan.text:
+                tspan.text = f'Commits: {stats["commits"]} | Stars: {stats["stars"]}'
+            if tspan.text and 'Followers' in tspan.text:
+                additions = stats["additions"]
+                deletions = stats['deletions']
+                total_lines = additions + deletions
+                tspan.text = f'Followers: {stats["followers"]} | Lines of Code: {total_lines} ({additions}++, {deletions}--)'
+
 
     # Save SVG & preserve formatting by using xml_declaration and encoding
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
