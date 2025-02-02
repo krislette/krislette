@@ -165,6 +165,7 @@ def save_svg_file(tree, output_file):
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
     print("Successfully saved updated SVG file")
 
+
 def update_svg_file(stats, input_file, output_file):
     """Update the SVG file with new statistics."""
     try:
