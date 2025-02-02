@@ -47,52 +47,125 @@ def get_github_stats(token):
     
     return stats
 
+
 def update_svg_file(stats, input_file, output_file):
     """Update the SVG file with new statistics."""
-    # Register the SVG namespace
-    ET.register_namespace('', "http://www.w3.org/2000/svg")
+    print(f"\nStarting SVG update process for {input_file}")
+    print(f"Stats to be updated: {stats}")
+    
+    try:
+        # Register the SVG namespace
+        ET.register_namespace('', "http://www.w3.org/2000/svg")
+        print("Registered SVG namespace")
+        
+        # Parse the SVG file
+        tree = ET.parse(input_file)
+        root = tree.getroot()
+        print("Successfully parsed SVG file")
+        
+        # Define namespaces
+        namespaces = {'svg': 'http://www.w3.org/2000/svg'}
+        updates_made = 0
+        
+        # Dictionary to track if we've found each stat section
+        found_stats = {
+            'repos': False,
+            'commits': False,
+            'stars': False,
+            'followers': False,
+            'lines': False
+        }
 
-    tree = ET.parse(input_file)
-    root = tree.getroot()
+        # Find all text elements
+        for text in root.findall(".//svg:text", namespaces):
+            tspans = text.findall(".//svg:tspan", namespaces)
+            current_section = None
+            
+            for i, tspan in enumerate(tspans):
+                if tspan.text is None:
+                    continue
+                
+                # Print for debugging
+                print(f"Processing tspan: '{tspan.text}'")
+                
+                # Update Repos and Contributed
+                if tspan.text == "Repos" and not found_stats['repos']:
+                    # Next tspan should be the repos count
+                    next_tspan = tspans[i + 1]
+                    next_tspan.text = str(stats['repos'])
+                    updates_made += 1
+                    print(f"Updated repos to: {stats['repos']}")
+                    
+                    # Find and update contributed count
+                    for j in range(i + 2, i + 5):
+                        if tspans[j].text == "Contributed":
+                            tspans[j + 1].text = str(stats['contributed'])
+                            updates_made += 1
+                            print(f"Updated contributed to: {stats['contributed']}")
+                            break
+                    found_stats['repos'] = True
+                
+                # Update Commits
+                elif tspan.text == "Commits" and not found_stats['commits']:
+                    next_tspan = tspans[i + 1]
+                    next_tspan.text = f"{stats['commits']:,}"
+                    updates_made += 1
+                    print(f"Updated commits to: {stats['commits']:,}")
+                    found_stats['commits'] = True
+                
+                # Update Stars
+                elif tspan.text == "Stars" and not found_stats['stars']:
+                    next_tspan = tspans[i + 1]
+                    next_tspan.text = str(stats['stars'])
+                    updates_made += 1
+                    print(f"Updated stars to: {stats['stars']}")
+                    found_stats['stars'] = True
+                
+                # Update Followers
+                elif tspan.text == "Followers" and not found_stats['followers']:
+                    next_tspan = tspans[i + 1]
+                    next_tspan.text = str(stats['followers'])
+                    updates_made += 1
+                    print(f"Updated followers to: {stats['followers']}")
+                    found_stats['followers'] = True
+                
+                # Update Lines of Code and additions/deletions
+                elif tspan.text == "Lines of Code" and not found_stats['lines']:
+                    total_lines = stats['additions'] + stats['deletions']
+                    # Update total lines
+                    next_tspan = tspans[i + 1]
+                    next_tspan.text = f"{total_lines:,}"
+                    updates_made += 1
+                    print(f"Updated total lines to: {total_lines:,}")
+                    
+                    # Update additions
+                    additions_tspan = tspans[i + 2]
+                    additions_tspan.text = f"{stats['additions']:,}++"
+                    updates_made += 1
+                    print(f"Updated additions to: {stats['additions']:,}++")
+                    
+                    # Update deletions
+                    deletions_tspan = tspans[i + 3]
+                    deletions_tspan.text = f"{stats['deletions']:,}--"
+                    updates_made += 1
+                    print(f"Updated deletions to: {stats['deletions']:,}--")
+                    found_stats['lines'] = True
 
-    # Find and update the GitHub stats text elements
-    for text in root.findall(".//{http://www.w3.org/2000/svg}text"):
-        for tspan in text.findall(".//{http://www.w3.org/2000/svg}tspan"):
-            if tspan.text:
-                # Update Repos and Contributed stats
-                if 'Repos' in tspan.text:
-                    parts = tspan.text.split()
-                    if len(parts) >= 2:
-                        parts[1] = str(stats['repos'])
-                        if len(parts) > 4 and parts[4] == '{Contributed:':
-                            parts[5] = str(stats['contributed']) + '}'
-                        tspan.text = ' '.join(parts)
+        print(f"\nTotal updates made: {updates_made}")
+        print("Stats found:", found_stats)
+        
+        if updates_made == 0:
+            print("WARNING: No updates were made to the SVG!")
+        
+        # Save the updated SVG
+        print(f"\nAttempting to save updates to {output_file}")
+        tree.write(output_file, encoding='utf-8', xml_declaration=True)
+        print("Successfully saved updated SVG file")
+        
+    except Exception as e:
+        print(f"ERROR: An exception occurred: {str(e)}")
+        raise
 
-                # Update Commits and Stars
-                elif 'Commits' in tspan.text:
-                    parts = tspan.text.split()
-                    if len(parts) >= 2:
-                        parts[1] = str(stats['commits'])
-                        if len(parts) > 4 and parts[4] == '|':
-                            parts[5] = str(stats['stars'])
-                        tspan.text = ' '.join(parts)
-
-                # Update Followers and Lines of Code
-                elif 'Followers' in tspan.text:
-                    parts = tspan.text.split()
-                    if len(parts) >= 2:
-                        parts[1] = str(stats['followers'])
-                        if len(parts) > 4 and parts[4] == '|':
-                            additions = stats.get('additions', 0)
-                            deletions = stats.get('deletions', 0)
-                            total_lines = additions + deletions
-                            parts[5] = str(total_lines)
-                            parts[7] = f"({additions:,}++,"
-                            parts[8] = f"{deletions:,}--)"
-                        tspan.text = ' '.join(parts)
-
-    # Save SVG & preserve formatting by using xml_declaration and encoding
-    tree.write(output_file, encoding='utf-8', xml_declaration=True)
 
 if __name__ == "__main__":
     # Get GitHub token from environment variable
@@ -102,6 +175,14 @@ if __name__ == "__main__":
 
     # Get statistics
     stats = get_github_stats(github_token)
+    print("Retrieved stats:", stats)  # Add this line
+
+    # Check if files exist and are writable
+    for mode in ['dark_mode.svg', 'light_mode.svg']:
+        path = os.path.join('modes', mode)
+        print(f"Checking {path}:")
+        print(f"  File exists: {os.path.exists(path)}")
+        print(f"  File is writable: {os.access(path, os.W_OK) if os.path.exists(path) else 'N/A'}")
 
     # Update both SVG files
     update_svg_file(stats, 'modes/dark_mode.svg', 'modes/dark_mode.svg')
