@@ -38,5 +38,5 @@ jobs:
         git diff
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions [bot]"
-        git commit -m "Updated README" -a || echo "No changes to commit"
+        git commit -m "Updated SVGs for light & dark mode" -a || echo "No changes to commit"
         git push
