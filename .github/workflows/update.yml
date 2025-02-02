@@ -27,7 +27,7 @@ jobs:
 
     - name: Run script
       env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: python script.py
 
     - name: Commit and push changes
