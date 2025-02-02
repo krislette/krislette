@@ -28,6 +28,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install PyGithub
 
+    - name: Run stats update script
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      run: python script.py
+
     - name: Commit files
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
