@@ -1,0 +1,2 @@
+- The idea of this repo is based on Andrew Grant's README profile.
+- For the python script, however, I created my own to automate the process.
