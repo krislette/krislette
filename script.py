@@ -70,7 +70,6 @@ def update_svg_file(stats, input_file, output_file):
                 total_lines = additions + deletions
                 tspan.text = f'Followers: {stats["followers"]} | Lines of Code: {total_lines} ({additions}++, {deletions}--)'
 
-
     # Save SVG & preserve formatting by using xml_declaration and encoding
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
 
