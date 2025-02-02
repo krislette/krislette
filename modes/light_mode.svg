@@ -71,6 +71,6 @@ text, tspan {white-space: pre;}
 <tspan x="415" y="450" class="keyColor">GitHub Stats</tspan>:
 <tspan x="415" y="470">——————</tspan>
 <tspan x="415" y="490" class="keyColor">Repos: 19 | Contributed: 0</tspan>: <tspan class="valueColor">19</tspan> {<tspan class="keyColor">Contributed</tspan>: <tspan class="valueColor">1</tspan>}  | <tspan class="keyColor">Commmits</tspan>: <tspan class="valueColor">1,139  </tspan>| <tspan class="keyColor">Stars</tspan>: <tspan class="valueColor">16</tspan>
-<tspan x="415" y="510" class="keyColor">Followers: 23 | Lines of Code: 650876 (474460++, 176416--)</tspan>: <tspan class="valueColor">21  </tspan>| <tspan class="keyColor">Lines of Code</tspan>: <tspan class="valueColor">24,208</tspan> (<tspan class="addColor">18,347++</tspan>, <tspan class="delColor">4,088--</tspan>)
+<tspan x="415" y="510" class="keyColor">Followers: 23 | Lines of Code: 650880 (474462++, 176418--)</tspan>: <tspan class="valueColor">21  </tspan>| <tspan class="keyColor">Lines of Code</tspan>: <tspan class="valueColor">24,208</tspan> (<tspan class="addColor">18,347++</tspan>, <tspan class="delColor">4,088--</tspan>)
 </text>
 </svg>
