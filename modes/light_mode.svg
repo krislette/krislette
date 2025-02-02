@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <svg xmlns="http://www.w3.org/2000/svg" font-family="Andale Mono,AndaleMono,Consolas,monospace" width="975px" height="550px" font-size="16px">
 <style>
 .keyColor {fill: #953800;}
@@ -10,9 +10,9 @@
 text, tspan {white-space: pre;}
 </style>
 
-<rect width="970px" height="530px" fill="#f6f8fa" rx="15"/>
+<rect width="970px" height="530px" fill="#f6f8fa" rx="15" />
 
-<!-- ASCII Art with darker fill color -->
+
 <text x="30" y="30" fill="#24292f" class="ascii">
 <tspan x="30" y="30">                :++=:       .        </tspan>
 <tspan x="30" y="45">                :++++=:     :%=          </tspan>
@@ -49,7 +49,7 @@ text, tspan {white-space: pre;}
 <tspan x="30" y="510">@%#+*#%%%%%%%%%#+*******=#%%%%%%%%%#**%%%</tspan>
 </text>
 
-<!-- Information Text with larger font size -->
+
 <text x="415" y="30" fill="#24292f">
 <tspan x="415" y="30">@krislette</tspan>
 <tspan x="415" y="50">——————</tspan>
