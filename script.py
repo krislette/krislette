@@ -88,5 +88,5 @@ if __name__ == "__main__":
     stats = get_github_stats(github_token)
     
     # Update both SVG files
-    update_svg_file(stats, 'modes/darkmode.svg', 'modes/darkmode.svg')
-    update_svg_file(stats, 'modes/lightmode.svg', 'modes/lightmode.svg')
+    update_svg_file(stats, 'modes/dark_mode.svg', 'modes/dark_mode.svg')
+    update_svg_file(stats, 'modes/light_mode.svg', 'modes/light_mode.svg')
