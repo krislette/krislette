@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" font-family="Andale Mono,AndaleMono,Consolas,monospace" width="975px" height="550px" font-size="16px">
-<ns0:style>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Andale Mono,AndaleMono,Consolas,monospace" width="975px" height="550px" font-size="16px">
+<style>
 .keyColor {fill: #ffa657;}
 .valueColor {fill: #a5d6ff;}
 .addColor {fill: #3fb950;}
@@ -8,69 +8,69 @@
 .commentColor {fill: #8b949e;}
 .ascii {fill: #c9d1d9;}
 text, tspan {white-space: pre;}
-</ns0:style>
+</style>
 
-<ns0:rect width="970px" height="530px" fill="#161b22" rx="15" />
-
-
-<ns0:text x="30" y="30" fill="#c9d1d9" class="ascii">
-<ns0:tspan x="30" y="30">                :++=:       .        </ns0:tspan>
-<ns0:tspan x="30" y="45">                :++++=:     :%=          </ns0:tspan>
-<ns0:tspan x="30" y="60">              :-=+**#**=:..  +*:         </ns0:tspan>
-<ns0:tspan x="30" y="75">           :=+++***+**#****+-:%#=.       </ns0:tspan>
-<ns0:tspan x="30" y="90">      ..:=++++++++****#**+#***%*.:.      </ns0:tspan>
-<ns0:tspan x="30" y="105">     .=+*++++++++**+*+#***%%%%%#++=+     </ns0:tspan>
-<ns0:tspan x="30" y="120">      =+++*+===+++*+*+++++#%##*#####-    </ns0:tspan>
-<ns0:tspan x="30" y="135">     =+++*+=++++++===+*+===+**#*#%%##+.  </ns0:tspan>
-<ns0:tspan x="30" y="150">   .=++**+++++=++++++++++***##%%%%%%%%-  </ns0:tspan>
-<ns0:tspan x="30" y="165"> :=+*****++++==*+++++++++***+*#######%-  </ns0:tspan>
-<ns0:tspan x="30" y="180">  ..=+*+*+++=+:+++++++++*+++***+**++=+:  </ns0:tspan>
-<ns0:tspan x="30" y="195">    :++*****+. .++*+++++-*++*++***%%%*   </ns0:tspan>
-<ns0:tspan x="30" y="210">    .*+****::====+*++++==+*+++++*+*+%*   </ns0:tspan>
-<ns0:tspan x="30" y="225">   .=++**+=++###-.*++*-:+**+**++**+.-=   </ns0:tspan>
-<ns0:tspan x="30" y="240">    .-+#**=.::.. :--**  ..-==*****+: .   </ns0:tspan>
-<ns0:tspan x="30" y="255">     ::-==-..      ..-=.  .:+++*+:.      </ns0:tspan>
-<ns0:tspan x="30" y="270">        .++=      .:        :+**:.       </ns0:tspan>
-<ns0:tspan x="30" y="285">         -=+=    ..   ..   -+=--:        </ns0:tspan>
-<ns0:tspan x="30" y="300">         .=***-.  .. .   :****- +        </ns0:tspan>
-<ns0:tspan x="30" y="315">         :=*#%#=-.    .:=*%#*+- #:       </ns0:tspan>
-<ns0:tspan x="30" y="330">      .-+####%#====--====*%%###*#+.      </ns0:tspan>
-<ns0:tspan x="30" y="345">     =##%######-::-===-:=+######%=#-    .</ns0:tspan>
-<ns0:tspan x="30" y="360">     .:=#######-:   .  :.######%*%##*:  =</ns0:tspan>
-<ns0:tspan x="30" y="375">   .:-=*#%%%%###.      .*###%%##%%%%#+:..</ns0:tspan>
-<ns0:tspan x="30" y="390">*+**#*+***#%%%%#+      -##%%%+++#%%%%%%%#</ns0:tspan>
-<ns0:tspan x="30" y="405">*##*#+#%#*+*%%%%%      +%%%*+++++##*%%++#</ns0:tspan>
-<ns0:tspan x="30" y="420">%-#%**#**++++%%%*::..::-%*++++++++#%%+++#</ns0:tspan>
-<ns0:tspan x="30" y="435">=#%#**+#+#%#*#%%#-....:++++++=++++##++#%%</ns0:tspan>
-<ns0:tspan x="30" y="450">+%%%**%+*%%##**%%%-.-+=++++++#***###%*#%%</ns0:tspan>
-<ns0:tspan x="30" y="465">***#*%%#%%%%%%#*#%*++++#***++*+=%%%%%*#%%</ns0:tspan>
-<ns0:tspan x="30" y="480">@%#+*#%%%%%%%%%#+++++++*=#++++%%%%%#**%%%</ns0:tspan>
-<ns0:tspan x="30" y="495">@%#+*#%%%%%%%%%#+++*****=#%%%%%%%%%#**%%%</ns0:tspan>
-<ns0:tspan x="30" y="510">@%#+*#%%%%%%%%%#+*******=#%%%%%%%%%#**%%%</ns0:tspan>
-</ns0:text>
+<rect width="970px" height="530px" fill="#161b22" rx="15" />
 
 
-<ns0:text x="415" y="30" fill="#c9d1d9">
-<ns0:tspan x="415" y="30">@krislette</ns0:tspan>
-<ns0:tspan x="415" y="50">——————</ns0:tspan>
-<ns0:tspan x="415" y="70" class="keyColor">OS</ns0:tspan>: <ns0:tspan class="valueColor">Windows 11</ns0:tspan>
-<ns0:tspan x="415" y="90" class="keyColor">Uptime</ns0:tspan>: <ns0:tspan class="valueColor">20 years, 7 months, 30 days</ns0:tspan>
-<ns0:tspan x="415" y="110" class="keyColor">Host</ns0:tspan>: <ns0:tspan class="valueColor">Polytechnic University of the Philippines</ns0:tspan><ns0:tspan class="commentColor"> #PUP</ns0:tspan>
-<ns0:tspan x="415" y="130" class="keyColor">Kernel</ns0:tspan>: <ns0:tspan class="valueColor">Bachelor of Science in Computer Science</ns0:tspan><ns0:tspan class="commentColor"> #BSCS</ns0:tspan>
-<ns0:tspan x="415" y="150" class="keyColor">IDE</ns0:tspan>: <ns0:tspan class="valueColor">VSCode, NetBeans, Dev-C++</ns0:tspan>
-<ns0:tspan x="415" y="190" class="keyColor">Languages</ns0:tspan>.<ns0:tspan class="keyColor">Programming</ns0:tspan>: <ns0:tspan class="valueColor">C, Java, JavaScript</ns0:tspan>
-<ns0:tspan x="415" y="210" class="keyColor">Languages</ns0:tspan>.<ns0:tspan class="keyColor">Computer</ns0:tspan>: <ns0:tspan class="valueColor">LaTeX, HTML, CSS</ns0:tspan>
-<ns0:tspan x="415" y="230" class="keyColor">Languages</ns0:tspan>.<ns0:tspan class="keyColor">Real</ns0:tspan>: <ns0:tspan class="valueColor">English, Filipino</ns0:tspan>
-<ns0:tspan x="415" y="270" class="keyColor">Hobbies</ns0:tspan>.<ns0:tspan class="keyColor">Software</ns0:tspan>: <ns0:tspan class="valueColor">Software Development, Genshin, Coding</ns0:tspan>
-<ns0:tspan x="415" y="290" class="keyColor">Hobbies</ns0:tspan>.<ns0:tspan class="keyColor">Hardware</ns0:tspan>: <ns0:tspan class="valueColor">Sleeping, Eating, Learning</ns0:tspan>
-<ns0:tspan x="415" y="330" class="keyColor">Contact</ns0:tspan>:
-<ns0:tspan x="415" y="350">——————</ns0:tspan>
-<ns0:tspan x="415" y="370" class="keyColor">Email</ns0:tspan>: <ns0:tspan class="valueColor">acellekrislette@gmail.com</ns0:tspan>
-<ns0:tspan x="415" y="390" class="keyColor">LinkedIn</ns0:tspan>: <ns0:tspan class="valueColor">@krislette</ns0:tspan>
-<ns0:tspan x="415" y="410" class="keyColor">Discord</ns0:tspan>: <ns0:tspan class="valueColor">kwislette</ns0:tspan>
-<ns0:tspan x="415" y="450" class="keyColor">GitHub Stats</ns0:tspan>:
-<ns0:tspan x="415" y="470">——————</ns0:tspan>
-<ns0:tspan x="415" y="490" class="keyColor">Repos: 19 {Contributed: 0}  | </ns0:tspan>: <ns0:tspan class="valueColor">19</ns0:tspan> {<ns0:tspan class="keyColor">Contributed</ns0:tspan>: <ns0:tspan class="valueColor">1</ns0:tspan>}  | <ns0:tspan class="keyColor">Commmits</ns0:tspan>: <ns0:tspan class="valueColor">1,139  </ns0:tspan>| <ns0:tspan class="keyColor">Stars</ns0:tspan>: <ns0:tspan class="valueColor">16</ns0:tspan>
-<ns0:tspan x="415" y="510" class="keyColor">Followers: 23  | Lines of Code: 650077 (</ns0:tspan>: <ns0:tspan class="valueColor">21  </ns0:tspan>| <ns0:tspan class="keyColor">Lines of Code</ns0:tspan>: <ns0:tspan class="valueColor">24,208</ns0:tspan> (<ns0:tspan class="addColor">473894++</ns0:tspan>, <ns0:tspan class="delColor">175847--</ns0:tspan>)
-</ns0:text>
-</ns0:svg>
+<text x="30" y="30" fill="#c9d1d9" class="ascii">
+<tspan x="30" y="30">                :++=:       .        </tspan>
+<tspan x="30" y="45">                :++++=:     :%=          </tspan>
+<tspan x="30" y="60">              :-=+**#**=:..  +*:         </tspan>
+<tspan x="30" y="75">           :=+++***+**#****+-:%#=.       </tspan>
+<tspan x="30" y="90">      ..:=++++++++****#**+#***%*.:.      </tspan>
+<tspan x="30" y="105">     .=+*++++++++**+*+#***%%%%%#++=+     </tspan>
+<tspan x="30" y="120">      =+++*+===+++*+*+++++#%##*#####-    </tspan>
+<tspan x="30" y="135">     =+++*+=++++++===+*+===+**#*#%%##+.  </tspan>
+<tspan x="30" y="150">   .=++**+++++=++++++++++***##%%%%%%%%-  </tspan>
+<tspan x="30" y="165"> :=+*****++++==*+++++++++***+*#######%-  </tspan>
+<tspan x="30" y="180">  ..=+*+*+++=+:+++++++++*+++***+**++=+:  </tspan>
+<tspan x="30" y="195">    :++*****+. .++*+++++-*++*++***%%%*   </tspan>
+<tspan x="30" y="210">    .*+****::====+*++++==+*+++++*+*+%*   </tspan>
+<tspan x="30" y="225">   .=++**+=++###-.*++*-:+**+**++**+.-=   </tspan>
+<tspan x="30" y="240">    .-+#**=.::.. :--**  ..-==*****+: .   </tspan>
+<tspan x="30" y="255">     ::-==-..      ..-=.  .:+++*+:.      </tspan>
+<tspan x="30" y="270">        .++=      .:        :+**:.       </tspan>
+<tspan x="30" y="285">         -=+=    ..   ..   -+=--:        </tspan>
+<tspan x="30" y="300">         .=***-.  .. .   :****- +        </tspan>
+<tspan x="30" y="315">         :=*#%#=-.    .:=*%#*+- #:       </tspan>
+<tspan x="30" y="330">      .-+####%#====--====*%%###*#+.      </tspan>
+<tspan x="30" y="345">     =##%######-::-===-:=+######%=#-    .</tspan>
+<tspan x="30" y="360">     .:=#######-:   .  :.######%*%##*:  =</tspan>
+<tspan x="30" y="375">   .:-=*#%%%%###.      .*###%%##%%%%#+:..</tspan>
+<tspan x="30" y="390">*+**#*+***#%%%%#+      -##%%%+++#%%%%%%%#</tspan>
+<tspan x="30" y="405">*##*#+#%#*+*%%%%%      +%%%*+++++##*%%++#</tspan>
+<tspan x="30" y="420">%-#%**#**++++%%%*::..::-%*++++++++#%%+++#</tspan>
+<tspan x="30" y="435">=#%#**+#+#%#*#%%#-....:++++++=++++##++#%%</tspan>
+<tspan x="30" y="450">+%%%**%+*%%##**%%%-.-+=++++++#***###%*#%%</tspan>
+<tspan x="30" y="465">***#*%%#%%%%%%#*#%*++++#***++*+=%%%%%*#%%</tspan>
+<tspan x="30" y="480">@%#+*#%%%%%%%%%#+++++++*=#++++%%%%%#**%%%</tspan>
+<tspan x="30" y="495">@%#+*#%%%%%%%%%#+++*****=#%%%%%%%%%#**%%%</tspan>
+<tspan x="30" y="510">@%#+*#%%%%%%%%%#+*******=#%%%%%%%%%#**%%%</tspan>
+</text>
+
+
+<text x="415" y="30" fill="#c9d1d9">
+<tspan x="415" y="30">@krislette</tspan>
+<tspan x="415" y="50">——————</tspan>
+<tspan x="415" y="70" class="keyColor">OS</tspan>: <tspan class="valueColor">Windows 11</tspan>
+<tspan x="415" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">20 years, 7 months, 30 days</tspan>
+<tspan x="415" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">Polytechnic University of the Philippines</tspan><tspan class="commentColor"> #PUP</tspan>
+<tspan x="415" y="130" class="keyColor">Kernel</tspan>: <tspan class="valueColor">Bachelor of Science in Computer Science</tspan><tspan class="commentColor"> #BSCS</tspan>
+<tspan x="415" y="150" class="keyColor">IDE</tspan>: <tspan class="valueColor">VSCode, NetBeans, Dev-C++</tspan>
+<tspan x="415" y="190" class="keyColor">Languages</tspan>.<tspan class="keyColor">Programming</tspan>: <tspan class="valueColor">C, Java, JavaScript</tspan>
+<tspan x="415" y="210" class="keyColor">Languages</tspan>.<tspan class="keyColor">Computer</tspan>: <tspan class="valueColor">LaTeX, HTML, CSS</tspan>
+<tspan x="415" y="230" class="keyColor">Languages</tspan>.<tspan class="keyColor">Real</tspan>: <tspan class="valueColor">English, Filipino</tspan>
+<tspan x="415" y="270" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Software</tspan>: <tspan class="valueColor">Software Development, Genshin, Coding</tspan>
+<tspan x="415" y="290" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Hardware</tspan>: <tspan class="valueColor">Sleeping, Eating, Learning</tspan>
+<tspan x="415" y="330" class="keyColor">Contact</tspan>:
+<tspan x="415" y="350">——————</tspan>
+<tspan x="415" y="370" class="keyColor">Email</tspan>: <tspan class="valueColor">acellekrislette@gmail.com</tspan>
+<tspan x="415" y="390" class="keyColor">LinkedIn</tspan>: <tspan class="valueColor">@krislette</tspan>
+<tspan x="415" y="410" class="keyColor">Discord</tspan>: <tspan class="valueColor">kwislette</tspan>
+<tspan x="415" y="450" class="keyColor">GitHub Stats</tspan>:
+<tspan x="415" y="470">——————</tspan>
+<tspan x="415" y="490" class="keyColor">Repos: 19 {Contributed: 0}  | Commmits: 2068  | Stars: 23</tspan>: <tspan class="valueColor">19</tspan> {<tspan class="keyColor">Contributed</tspan>: <tspan class="valueColor">1</tspan>}  | <tspan class="keyColor">Commmits</tspan>: <tspan class="valueColor">1,139  </tspan>| <tspan class="keyColor">Stars</tspan>: <tspan class="valueColor">16</tspan>
+<tspan x="415" y="510" class="keyColor">Followers: 23  | Lines of Code: 650116 (474078++, 176038--)</tspan>: <tspan class="valueColor">21  </tspan>| <tspan class="keyColor">Lines of Code</tspan>: <tspan class="valueColor">24,208</tspan> (<tspan class="addColor">473894++</tspan>, <tspan class="delColor">175847--</tspan>)
+</text>
+</svg>
