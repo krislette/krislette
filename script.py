@@ -51,30 +51,23 @@ def get_github_stats(token):
 
 def update_svg_file(stats, input_file, output_file):
     """Update the SVG file with new statistics."""
+    # Register the SVG namespace
+    ET.register_namespace('', "http://www.w3.org/2000/svg")
+
     tree = ET.parse(input_file)
     root = tree.getroot()
-    
-    # Find and update the GitHub stats text elements
+
+    # Find all text elements
     for text in root.findall(".//{http://www.w3.org/2000/svg}text"):
         for tspan in text.findall(".//{http://www.w3.org/2000/svg}tspan"):
-            if 'Repos' in tspan.text:
-                # Update repos and contributed
-                tspan.text = f"Repos: {stats['repos']} {{Contributed: {stats['contributed']}}}  | "
-            elif 'Commits' in tspan.text:
-                # Update commits and stars
-                tspan.text = f"Commits: {stats['commits']}  | Stars: {stats['stars']}"
-            elif 'Followers' in tspan.text:
-                # Update followers and lines of code
+            if "Repos: " in tspan.text and "{" in tspan.text:
+                # Update only the numbers in the existing text
+                tspan.text = f"Repos: {stats['repos']} {{Contributed: {stats['contributed']}}}  | Commmits: {stats['commits']}  | Stars: {stats['stars']}"
+            elif "Followers: " in tspan.text and "Lines of Code" in tspan.text:
                 total_lines = stats['additions'] + stats['deletions']
-                tspan.text = f"Followers: {stats['followers']}  | Lines of Code: {total_lines} ("
-            elif '18,347' in tspan.text:
-                # Update additions
-                tspan.text = f"{stats['additions']}++"
-            elif '4,088' in tspan.text:
-                # Update deletions
-                tspan.text = f"{stats['deletions']}--"
-    
-    # Save the updated SVG
+                tspan.text = f"Followers: {stats['followers']}  | Lines of Code: {total_lines} ({stats['additions']}++, {stats['deletions']}--)"
+
+    # Save SVG & preserve formatting by using xml_declaration and encoding
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
 
 
@@ -83,10 +76,10 @@ if __name__ == "__main__":
     github_token = os.getenv('GH_TOKEN')
     if not github_token:
         raise ValueError("GitHub token not found in environment variables")
-    
+
     # Get statistics
     stats = get_github_stats(github_token)
-    
+
     # Update both SVG files
     update_svg_file(stats, 'modes/dark_mode.svg', 'modes/dark_mode.svg')
     update_svg_file(stats, 'modes/light_mode.svg', 'modes/light_mode.svg')
