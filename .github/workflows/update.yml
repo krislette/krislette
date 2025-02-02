@@ -3,7 +3,6 @@ name: Update GitHub Stats
 on:
   schedule:
     - cron: '0 */12 * * *'
-  workflow_dispatch:
   push:
     branches:
       - main
@@ -37,7 +36,7 @@ jobs:
         run: |-
           git add .
           git diff
-          git config --global user.email "github-actions-bot@andrew6rant.github.io"
-          git config --global user.name "Andrew6rant/GitHub-Actions-Bot"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions [bot]"
           git commit -m "Updated README" -a || echo "No changes to commit"
           git push
