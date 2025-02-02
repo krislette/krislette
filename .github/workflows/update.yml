@@ -3,6 +3,7 @@ name: Update GitHub Stats
 on:
   schedule:
     - cron: '0 */8 * * *'
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -15,8 +16,7 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
       with:
-        persist-credentials: false
-        fetch-depth: 0
+        fetch-depth: 1
 
     - name: Set up Python
       uses: actions/setup-python@v4
