@@ -22,7 +22,7 @@ def get_github_stats(token):
 
     # Initialize repos for subsequent stats
     repos = user.get_repos()
-    
+
     for repo in repos:
         # Count stars
         stats['stars'] += repo.stargazers_count 
@@ -109,7 +109,7 @@ def update_lines_section(tspans, i, stats):
     """Update lines of code statistics in the SVG."""
     updates = 0
     total_lines = stats['additions'] + stats['deletions']
-    
+
     # Update total lines
     next_tspan = tspans[i + 1]
     next_tspan.text = f"{total_lines:,}"
@@ -127,14 +127,14 @@ def update_lines_section(tspans, i, stats):
     deletions_tspan.text = f"{stats['deletions']:,}--"
     updates += 1
     print(f"Updated deletions to: {stats['deletions']:,}--")
-    
+
     return updates
 
 
 def process_tspan_element(tspan, tspans, i, stats, found_stats):
     """Process a single tspan element and update statistics accordingly."""
     updates = 0
-    
+
     if tspan.text is None:
         return updates
 
@@ -170,15 +170,15 @@ def update_svg_file(stats, input_file, output_file):
     """Update the SVG file with new statistics."""
     try:
         print(f"Stats to be updated: {stats}")
-        
+
         # Initialize SVG parsing
         tree, root = setup_svg_parsing(input_file)
         print("Successfully parsed SVG file")
-        
+
         # Define namespaces
         namespaces = {'svg': 'http://www.w3.org/2000/svg'}
         updates_made = 0
-        
+
         # Dictionary to track if we've found each stat section
         found_stats = {
             'repos': False,
