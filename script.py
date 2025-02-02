@@ -2,7 +2,6 @@ import os
 from github import Github
 import xml.etree.ElementTree as ET
 
-
 def get_github_stats(token):
     """Fetch GitHub statistics using the GitHub API."""
     # Initialize GitHub API
@@ -48,7 +47,6 @@ def get_github_stats(token):
     
     return stats
 
-
 def update_svg_file(stats, input_file, output_file):
     """Update the SVG file with new statistics."""
     # Register the SVG namespace
@@ -63,38 +61,38 @@ def update_svg_file(stats, input_file, output_file):
             if tspan.text:
                 # Update Repos and Contributed stats
                 if 'Repos' in tspan.text:
-                    parts = []
-                    if stats.get('repos') is not None:
-                        # Keep the original "Repos: " text, just update the number
-                        repos_part = tspan.text.split('{')[0].strip()
-                        repos_number = str(stats['repos'])
-                        parts.append(f"{repos_part.split(':')[0]}: {repos_number}")
-
-                    # Handle the contributed part
-                    if stats.get('contributed') is not None:
-                        parts.append(f"Contributed: {stats['contributed']}")
-
-                    if parts:
-                        tspan.text = f"{parts[0]} {{{parts[1]}}}"
+                    parts = tspan.text.split()
+                    if len(parts) >= 2:
+                        parts[1] = str(stats['repos'])
+                        if len(parts) > 4 and parts[4] == '{Contributed:':
+                            parts[5] = str(stats['contributed']) + '}'
+                        tspan.text = ' '.join(parts)
 
                 # Update Commits and Stars
                 elif 'Commits' in tspan.text:
-                    if stats.get('commits') is not None and stats.get('stars') is not None:
-                        # Keep the original format, just update the numbers
-                        tspan.text = f"Commits: {stats['commits']:,}  | Stars: {stats['stars']}"
+                    parts = tspan.text.split()
+                    if len(parts) >= 2:
+                        parts[1] = str(stats['commits'])
+                        if len(parts) > 4 and parts[4] == '|':
+                            parts[5] = str(stats['stars'])
+                        tspan.text = ' '.join(parts)
 
                 # Update Followers and Lines of Code
                 elif 'Followers' in tspan.text:
-                    if stats.get('followers') is not None:
-                        additions = stats.get('additions', 0)
-                        deletions = stats.get('deletions', 0)
-                        total_lines = additions + deletions
-                        tspan.text = (f"Followers: {stats['followers']}  | Lines of Code: {total_lines:,} "
-                                    f"({additions:,}++, {deletions:,}--)")
+                    parts = tspan.text.split()
+                    if len(parts) >= 2:
+                        parts[1] = str(stats['followers'])
+                        if len(parts) > 4 and parts[4] == '|':
+                            additions = stats.get('additions', 0)
+                            deletions = stats.get('deletions', 0)
+                            total_lines = additions + deletions
+                            parts[5] = str(total_lines)
+                            parts[7] = f"({additions:,}++,"
+                            parts[8] = f"{deletions:,}--)"
+                        tspan.text = ' '.join(parts)
 
     # Save SVG & preserve formatting by using xml_declaration and encoding
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
-
 
 if __name__ == "__main__":
     # Get GitHub token from environment variable
