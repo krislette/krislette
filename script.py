@@ -1,5 +1,6 @@
 import os
 from github import Github
+from datetime import datetime, date
 import xml.etree.ElementTree as ET
 
 
@@ -51,6 +52,44 @@ def get_github_stats(token):
     stats['contributed'] = len(contributed_repos)
 
     return stats
+
+
+def calculate_uptime(birth_date):
+    """Calculate years, months, and days from birth_date until now."""
+    today = date.today()
+
+    # Convert string date to datetime if needed
+    if isinstance(birth_date, str):
+        birth_date = datetime.strptime(birth_date, '%Y-%m-%d').date()
+    
+    # Calculate years
+    years = today.year - birth_date.year
+    
+    # Calculate months
+    if today.month >= birth_date.month:
+        months = today.month - birth_date.month
+    else:
+        years -= 1
+        months = 12 + (today.month - birth_date.month)
+    
+    # Calculate days
+    if today.day >= birth_date.day:
+        days = today.day - birth_date.day
+    else:
+        if months == 0:
+            years -= 1
+            months = 11
+        else:
+            months -= 1
+        # Get days in previous month
+        if today.month == 1:
+            prev_month = date(today.year - 1, 12, 1)
+        else:
+            prev_month = date(today.year, today.month - 1, 1)
+
+        days = (today - date(today.year, today.month, 1)).days + (prev_month.replace(month=prev_month.month % 12 + 1, day=1) - prev_month).days - birth_date.day
+    
+    return years, months, days
 
 
 def setup_svg_parsing(input_file):
@@ -131,6 +170,19 @@ def update_lines_section(tspans, i, stats):
     return updates
 
 
+def update_uptime_section(tspans, i):
+    """Update uptime statistics in the SVG."""
+    # Mah birthday
+    birth_date = date(2003, 11, 14)
+
+    years, months, days = calculate_uptime(birth_date)
+    next_tspan = tspans[i + 1]
+    next_tspan.text = f"{years} years, {months} months, {days} days"
+    print(f"Updated uptime to: {years} years, {months} months, {days} days")
+
+    return 1
+
+
 def process_tspan_element(tspan, tspans, i, stats, found_stats):
     """Process a single tspan element and update statistics accordingly."""
     updates = 0
@@ -155,6 +207,9 @@ def process_tspan_element(tspan, tspans, i, stats, found_stats):
     elif tspan.text == "Lines of Code" and not found_stats['lines']:
         updates += update_lines_section(tspans, i, stats)
         found_stats['lines'] = True
+    elif tspan.text == "Uptime" and not found_stats.get('uptime', False):
+        updates += update_uptime_section(tspans, i)
+        found_stats['uptime'] = True
 
     return updates
 
@@ -185,7 +240,8 @@ def update_svg_file(stats, input_file, output_file):
             'commits': False,
             'stars': False,
             'followers': False,
-            'lines': False
+            'lines': False,
+            'uptime': False
         }
 
         # Find all text elements
