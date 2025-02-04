@@ -55,8 +55,8 @@ text, tspan {white-space: pre;}
 <tspan x="415" y="50">——————</tspan>
 <tspan x="415" y="70" class="keyColor">OS</tspan>: <tspan class="valueColor">Windows 11</tspan>
 <tspan x="415" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">21 years, 2 months, 20 days</tspan>
-<tspan x="415" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">Polytechnic University of the Philippines</tspan><tspan class="commentColor"> #PUP</tspan>
-<tspan x="415" y="130" class="keyColor">Kernel</tspan>: <tspan class="valueColor">Bachelor of Science in Computer Science</tspan><tspan class="commentColor"> #BSCS</tspan>
+<tspan x="415" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">Polytechnic University of the Philippines</tspan><tspan class="commentColor"> # PUP</tspan>
+<tspan x="415" y="130" class="keyColor">Kernel</tspan>: <tspan class="valueColor">Bachelor of Science in Computer Science</tspan><tspan class="commentColor"> # BSCS</tspan>
 <tspan x="415" y="150" class="keyColor">IDE</tspan>: <tspan class="valueColor">VSCode, NetBeans, Dev-C++</tspan>
 <tspan x="415" y="190" class="keyColor">Languages</tspan>.<tspan class="keyColor">Programming</tspan>: <tspan class="valueColor">C, Java, JavaScript</tspan>
 <tspan x="415" y="210" class="keyColor">Languages</tspan>.<tspan class="keyColor">Computer</tspan>: <tspan class="valueColor">LaTeX, HTML, CSS</tspan>
