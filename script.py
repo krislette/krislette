@@ -273,7 +273,7 @@ def main():
 
     # Get statistics
     stats = get_github_stats(github_token)
-    print("Retrieved stats:", stats)  # Add this line
+    print("Retrieved stats:", stats)
 
     # Check if files exist and are writable
     for mode in ['dark_mode.svg', 'light_mode.svg']:
