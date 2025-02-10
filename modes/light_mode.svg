@@ -80,6 +80,6 @@ text, tspan {white-space: pre;}
 <tspan x="415" y="450">- GitHub Stats</tspan> -—————————————————————————————————————————-—-
 <tspan x="415" y="490"></tspan><tspan class="keyColor">Repos</tspan>:<tspan class="cc"> .... </tspan><tspan class="valueColor">95</tspan> {<tspan class="keyColor">Contributed</tspan>: <tspan class="valueColor">133</tspan>} | <tspan class="keyColor">Stars</tspan>:<tspan class="cc"> ........... </tspan><tspan class="valueColor">326</tspan>
 <tspan x="415" y="510"></tspan><tspan class="keyColor">Commmits</tspan>:<tspan class="cc"> ................. </tspan><tspan class="valueColor">2,116</tspan> | <tspan class="keyColor">Followers</tspan>:<tspan class="cc"> ....... </tspan><tspan class="valueColor">187</tspan>
-<tspan x="415" y="550"></tspan><tspan class="keyColor">Lines of Code</tspan>:<tspan class="cc">... </tspan><tspan class="valueColor">446,276</tspan> ( <tspan class="addColor">++</tspan><tspan class="addColor">523,178</tspan>, </tspan><tspan class="delColor">--</tspan><tspan class="delColor">76,902</tspan> )
+<tspan x="415" y="550"></tspan><tspan class="keyColor">Lines of Code</tspan>:<tspan class="cc">... </tspan><tspan class="valueColor">446,276</tspan> ( <tspan class="addColor">++</tspan><tspan class="addColor">523,178</tspan>, <tspan class="delColor">--</tspan><tspan class="delColor">76,902</tspan> )
 </text>
 </svg>
