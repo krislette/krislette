@@ -89,7 +89,11 @@ def calculate_uptime(birth_date):
 
         days = (today - date(today.year, today.month, 1)).days + (prev_month.replace(month=prev_month.month % 12 + 1, day=1) - prev_month).days - birth_date.day
     
-    return years, months, days
+    # Format months and days to always be two digits
+    months_str = f"{months:02d}"
+    days_str = f"{days:02d}"
+    
+    return years, months_str, days_str
 
 
 def setup_svg_parsing(input_file):
@@ -104,17 +108,18 @@ def setup_svg_parsing(input_file):
 def update_repos_section(tspans, i, stats):
     """Update repository statistics in the SVG."""
     updates = 0
-    next_tspan = tspans[i + 1]
-    next_tspan.text = str(stats['repos'])
+    value_tspan = tspans[i + 2]
+    value_tspan.text = str(stats['repos'])
     updates += 1
     print(f"Updated repos to: {stats['repos']}")
 
     # Find and update contributed count
-    for j in range(i + 2, i + 5):
+    for j in range(i, len(tspans)):
         if tspans[j].text == "Contributed":
-            tspans[j + 1].text = str(stats['contributed'])
+            value_tspan = tspans[j + 1]
+            formatted_contributed = f"{stats['contributed']:02d}"
+            value_tspan.text = formatted_contributed
             updates += 1
-            print(f"Updated contributed to: {stats['contributed']}")
             break
     
     return updates
@@ -122,24 +127,24 @@ def update_repos_section(tspans, i, stats):
 
 def update_commits_section(tspans, i, stats):
     """Update commit statistics in the SVG."""
-    next_tspan = tspans[i + 1]
-    next_tspan.text = f"{stats['commits']:,}"
+    value_tspan = tspans[i + 2]
+    value_tspan.text = f"{stats['commits']:,}"
     print(f"Updated commits to: {stats['commits']:,}")
     return 1
 
 
 def update_stars_section(tspans, i, stats):
     """Update star statistics in the SVG."""
-    next_tspan = tspans[i + 1]
-    next_tspan.text = str(stats['stars'])
+    value_tspan = tspans[i + 2]
+    value_tspan.text = str(stats['stars'])
     print(f"Updated stars to: {stats['stars']}")
     return 1
 
 
 def update_followers_section(tspans, i, stats):
     """Update follower statistics in the SVG."""
-    next_tspan = tspans[i + 1]
-    next_tspan.text = str(stats['followers'])
+    value_tspan = tspans[i + 2]
+    value_tspan.text = str(stats['followers'])
     print(f"Updated followers to: {stats['followers']}")
     return 1
 
@@ -150,20 +155,20 @@ def update_lines_section(tspans, i, stats):
     total_lines = stats['additions'] + stats['deletions']
 
     # Update total lines
-    next_tspan = tspans[i + 1]
-    next_tspan.text = f"{total_lines:,}"
+    value_tspan = tspans[i + 2]
+    value_tspan.text = f"{total_lines:,}"
     updates += 1
     print(f"Updated total lines to: {total_lines:,}")
 
     # Update additions
-    additions_tspan = tspans[i + 2]
-    additions_tspan.text = f"{stats['additions']:,}++"
+    additions_tspan = tspans[i + 3]
+    additions_tspan.text = f"++{stats['additions']:,}"
     updates += 1
     print(f"Updated additions to: {stats['additions']:,}++")
 
     # Update deletions
-    deletions_tspan = tspans[i + 3]
-    deletions_tspan.text = f"{stats['deletions']:,}--"
+    deletions_tspan = tspans[i + 4]
+    deletions_tspan.text = f"--{stats['deletions']:,}"
     updates += 1
     print(f"Updated deletions to: {stats['deletions']:,}--")
 
@@ -174,10 +179,10 @@ def update_uptime_section(tspans, i):
     """Update uptime statistics in the SVG."""
     # Mah birthday
     birth_date = date(2003, 11, 14)
-
     years, months, days = calculate_uptime(birth_date)
-    next_tspan = tspans[i + 1]
-    next_tspan.text = f"{years} years, {months} months, {days} days"
+
+    value_tspan = tspans[i + 2]
+    value_tspan.text = f"{years} years, {months} months, {days} days"
     print(f"Updated uptime to: {years} years, {months} months, {days} days")
 
     return 1
