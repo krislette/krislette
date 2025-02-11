@@ -61,7 +61,7 @@ text, tspan {white-space: pre;}
 <tspan x="415" y="50">Profile</tspan> -————————————————————————————————————————————————-—-
 <tspan x="415" y="70" class="keyColor">OS</tspan>:<tspan class="cc"> ............................................. </tspan><tspan class="valueColor">Windows 11</tspan>
 <tspan x="415" y="90" class="keyColor">Uptime</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="valueColor">21 years, 02 months, 27 days</tspan>
-<tspan x="415" y="110" class="keyColor">Host</tspan>:<tspan class="cc">............. </tspan><tspan class="valueColor">Polytechnic University of the Philippines</tspan>
+<tspan x="415" y="110" class="keyColor">Host</tspan>:<tspan class="cc"> ............ </tspan><tspan class="valueColor">Polytechnic University of the Philippines</tspan>
 <tspan x="415" y="130" class="keyColor">Kernel</tspan>:<tspan class="cc"> ............ </tspan><tspan class="valueColor">Bachelor of Science in Computer Science</tspan>
 <tspan x="415" y="150" class="keyColor">IDE</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="valueColor">VSCode, NetBeans, Dev-C++</tspan>
 
@@ -69,8 +69,8 @@ text, tspan {white-space: pre;}
 <tspan x="415" y="210" class="keyColor">Languages</tspan>.<tspan class="keyColor">Computer</tspan>:<tspan class="cc"> ................. </tspan><tspan class="valueColor">LaTeX, HTML, CSS, JSON</tspan>
 <tspan x="415" y="230" class="keyColor">Languages</tspan>.<tspan class="keyColor">Real</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="valueColor">English, Filipino</tspan>
 
-<tspan x="415" y="270" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Software</tspan>:<tspan class="cc"> .......................... </tspan><tspan class="valueColor">Genshin, Coding</tspan>
-<tspan x="415" y="290" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Hardware</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="valueColor">Sleeping</tspan>
+<tspan x="415" y="270" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Software</tspan>:<tspan class="cc"> ......... </tspan><tspan class="valueColor">Genshin, Coding, Automation, COC</tspan>
+<tspan x="415" y="290" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Hardware</tspan>:<tspan class="cc"> .................... </tspan><tspan class="valueColor">Sleeping, Sun Soaking</tspan>
 
 <tspan x="415" y="330">Contact</tspan> -————————————————————————————————————————————————-—-
 <tspan x="415" y="350" class="keyColor">Email.University</tspan>:<tspan class="cc"> ... </tspan><tspan class="valueColor">acellekrislettelrosales@iskolarngbayan</tspan>
