@@ -22,7 +22,15 @@ def get_github_stats(token):
     }
 
     # Initialize repos for subsequent stats
-    repos = user.get_repos()
+    repos = list(user.get_repos())
+
+    # Include repo orgs (Zeegma so far)
+    for org in user.get_orgs():
+        try:
+            org_repos = org.get_repos()
+            repos.extend(org_repos)
+        except Exception as e:
+            print(f"Error fetching repos for organization {org.login}: {str(e)}")
 
     for repo in repos:
         # Count stars
