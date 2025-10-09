@@ -60,7 +60,7 @@ text, tspan {white-space: pre;}
 <tspan x="415" y="30">                                                  @krislette</tspan>
 <tspan x="415" y="50">Profile</tspan> -————————————————————————————————————————————————-—-
 <tspan x="415" y="70" class="keyColor">OS</tspan>:<tspan class="cc"> ............................................. </tspan><tspan class="valueColor">Windows 11</tspan>
-<tspan x="415" y="90" class="keyColor">Uptime</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="valueColor">21 years, 10 months, 23 days</tspan>
+<tspan x="415" y="90" class="keyColor">Uptime</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="valueColor">21 years, 10 months, 24 days</tspan>
 <tspan x="415" y="110" class="keyColor">Host</tspan>:<tspan class="cc"> ............ </tspan><tspan class="valueColor">Polytechnic University of the Philippines</tspan>
 <tspan x="415" y="130" class="keyColor">Kernel</tspan>:<tspan class="cc"> ............ </tspan><tspan class="valueColor">Bachelor of Science in Computer Science</tspan>
 <tspan x="415" y="150" class="keyColor">IDE</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="valueColor">VSCode, NetBeans, Dev-C++</tspan>
@@ -80,7 +80,7 @@ text, tspan {white-space: pre;}
 
 <tspan x="415" y="450">GitHub Stats</tspan> -———————————————————————————————————————————-—-
 <tspan x="415" y="470" class="keyColor">Repos</tspan>:<tspan class="cc"> ....... </tspan><tspan class="valueColor">49</tspan> {<tspan class="keyColor">Contributed</tspan>: <tspan class="valueColor">04</tspan>} | <tspan class="keyColor">Stars</tspan>:<tspan class="cc"> ............ </tspan><tspan class="valueColor">55</tspan>
-<tspan x="415" y="490" class="keyColor">Commits</tspan>:<tspan class="cc"> .................... </tspan><tspan class="valueColor">4,851</tspan> | <tspan class="keyColor">Followers</tspan>:<tspan class="cc"> ........ </tspan><tspan class="valueColor">26</tspan> 
-<tspan x="415" y="510" class="keyColor">Lines of Code</tspan>:<tspan class="cc"> ........ </tspan><tspan class="valueColor">1,653,553</tspan> [ <tspan class="addColor">++1,052,875</tspan>, <tspan class="delColor">--600,678</tspan> ]
+<tspan x="415" y="490" class="keyColor">Commits</tspan>:<tspan class="cc"> .................... </tspan><tspan class="valueColor">4,852</tspan> | <tspan class="keyColor">Followers</tspan>:<tspan class="cc"> ........ </tspan><tspan class="valueColor">26</tspan> 
+<tspan x="415" y="510" class="keyColor">Lines of Code</tspan>:<tspan class="cc"> ........ </tspan><tspan class="valueColor">1,653,565</tspan> [ <tspan class="addColor">++1,052,881</tspan>, <tspan class="delColor">--600,684</tspan> ]
 </text>
 </svg>
